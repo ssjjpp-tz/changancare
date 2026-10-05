@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chang'an Care — World-Class Healthcare in Xi'an, China</title>
+<meta name="description" content="Chang'an Care connects international patients with top-tier hospitals and specialists in Xi'an, China. Hospital matching, interpretation, travel assistance and follow-up care — end to end.">
+<style>
+  :root{
+    --ink:#0F2E2B;
+    --paper:#FAF7F2;
+    --gold:#C9A45C;
+    --teal:#2E6E63;
+    --line:#E5DECE;
+    --muted:#6B7A76;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);color:var(--ink);
+    line-height:1.65;font-size:17px;
+  }
+  h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .kicker{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--teal);margin-bottom:14px;font-weight:600;
+  }
+  .rule{width:44px;height:2px;background:var(--gold);margin:20px 0}
+  .muted{color:var(--muted)}
+
+  /* nav */
+  header{
+    position:sticky;top:0;z-index:10;background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:20px}
+  .brand .seal{
+    width:30px;height:30px;background:var(--ink);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;border-radius:4px;font-family:Georgia,serif;
+  }
+  .nav a.cta{
+    font-size:14px;text-decoration:none;color:var(--paper);
+    background:var(--ink);padding:9px 18px;border-radius:3px;
+  }
+
+  /* hero */
+  .hero{padding:120px 0 96px;text-align:left}
+  .hero h1{font-size:52px;line-height:1.15;letter-spacing:-.5px;max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero p.lead{font-size:19px;max-width:52ch;margin-top:22px;color:#33413E}
+  .btn{
+    display:inline-block;margin-top:34px;padding:14px 30px;
+    background:var(--ink);color:var(--paper);text-decoration:none;
+    font-size:15px;border-radius:3px;
+  }
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:12px}
+
+  /* stats */
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:44px;padding-bottom:44px}
+  .stat b{display:block;font-family:Georgia,serif;font-size:34px;font-weight:400}
+  .stat span{font-size:13px;color:var(--muted);letter-spacing:.04em}
+
+  /* services */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+  .cell{background:var(--paper);padding:34px 28px}
+  .cell h3{font-size:19px;margin:14px 0 8px}
+  .cell p{font-size:15px;color:var(--muted)}
+  .cell .num{font-family:Georgia,serif;font-size:14px;color:var(--gold)}
+
+  /* why xian */
+  .why{background:var(--ink);color:var(--paper)}
+  .why .kicker{color:var(--gold)}
+  .why h2{font-size:36px;max-width:20ch}
+  .why p{color:#C7D2CE;font-size:16px;max-width:62ch}
+  .why .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+  .why .cols h3{font-size:18px;color:var(--paper);margin-bottom:8px}
+  .why .cols p{font-size:15px}
+  .why .rule{background:var(--gold)}
+
+  /* hospitals */
+  .hosp{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .tag{
+    border:1px solid var(--line);background:#fff;padding:10px 18px;
+    font-size:14px;border-radius:3px;color:#33413E;
+  }
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:44px}
+  .step{border-top:2px solid var(--gold);padding-top:18px}
+  .step b{font-family:Georgia,serif;font-size:16px;display:block;margin-bottom:6px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  /* contact */
+  .contact{background:var(--teal);color:var(--paper);text-align:center}
+  .contact h2{font-size:36px}
+  .contact p{color:#DDE8E4;max-width:52ch;margin:16px auto 0}
+  .cards{display:grid;grid-template-columns:repeat(2,minmax(0,320px));justify-content:center;gap:16px;margin:44px auto 0;text-align:left}
+  .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:4px;padding:22px}
+  .card small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .card a{color:var(--paper);text-decoration:none;font-size:16px;word-break:break-all}
+  .card a:hover{text-decoration:underline}
+
+  footer{padding:32px 0;font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .hero h1{font-size:38px}
+    .grid,.why .cols{grid-template-columns:1fr}
+    .stats .wrap,.steps{grid-template-columns:1fr 1fr}
+    .cards{grid-template-columns:1fr;justify-content:stretch}
+    section{padding:64px 0}
+  }
+  @media (max-width:560px){
+    .stats .wrap,.steps{grid-template-columns:1fr}
+    .btn.ghost{margin-left:0;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="seal">CA</span> Chang'an Care</div>
+    <a class="cta" href="#contact">Free Consultation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Medical Concierge · Xi'an, China</div>
+    <h1>World-class Chinese healthcare, <em>without the guesswork.</em></h1>
+    <div class="rule"></div>
+    <p class="lead">Chang'an Care connects international patients with Xi'an's top-tier hospitals and verified specialists — handling appointments, medical records, interpretation, travel and follow-up, end to end.</p>
+    <a class="btn" href="#contact">Get a Free Consultation</a>
+    <a class="btn ghost" href="#services">Our Services</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>6</b><span>Tertiary-A partner hospitals</span></div>
+    <div class="stat"><b>50+</b><span>Verified senior specialists</span></div>
+    <div class="stat"><b>3</b><span>Languages: EN · 中文 · العربية</span></div>
+    <div class="stat"><b>100%</b><span>Confidential &amp; private</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">What We Do</div>
+    <h2 class="serif" style="font-size:36px">Full-service care, from first message to final follow-up</h2>
+    <div class="grid">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Hospital &amp; Specialist Matching</h3>
+        <p>We review your diagnosis and match you with the right department and senior specialist at a top Xi'an hospital — before you book a flight.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Appointment &amp; Records Handling</h3>
+        <p>Scheduling, medical record translation and coordination with hospital international desks — paperwork done for you.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Medical Interpretation</h3>
+        <p>Professional in-person interpreters for consultations, examinations and treatment, so nothing is lost in translation.</p>
+      </div>
+      <div class="cell">
+        <div class="num">04</div>
+        <h3>Travel &amp; Accommodation</h3>
+        <p>Visa guidance, airport pickup, hotel booking near your hospital, and local transport arranged around your treatment schedule.</p>
+      </div>
+      <div class="cell">
+        <div class="num">05</div>
+        <h3>Treatment Companion</h3>
+        <p>A dedicated coordinator accompanies you through admission, tests and procedures — one point of contact, every step.</p>
+      </div>
+      <div class="cell">
+        <div class="num">06</div>
+        <h3>Post-Treatment Follow-up</h3>
+        <p>After you fly home, we relay your reports back to the medical team and coordinate remote follow-up consultations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY XIAN -->
+<section class="why">
+  <div class="wrap">
+    <div class="kicker">Why Xi'an</div>
+    <h2>Ancient capital. Modern medicine. A fraction of the cost.</h2>
+    <div class="rule"></div>
+    <p>Xi'an is one of China's leading medical hubs, home to nationally ranked university hospitals, robotic surgery programs and advanced oncology centers — with treatment costs typically well below those in the US or Europe, and no long waiting lists.</p>
+    <div class="cols">
+      <div>
+        <h3>Top-tier hospitals</h3>
+        <p>Ranked tertiary-A hospitals affiliated with Xi'an Jiaotong University and major provincial medical centers.</p>
+      </div>
+      <div>
+        <h3>Clear, upfront costs</h3>
+        <p>You receive a written cost estimate before you commit. No hidden fees, no surprise bills.</p>
+      </div>
+      <div>
+        <h3>Recover in a historic city</h3>
+        <p>Between appointments, walk the ancient City Wall or visit the Terracotta Army — Xi'an makes recovery feel like travel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOSPITALS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Partner Network</div>
+    <h2 class="serif" style="font-size:32px">Hospitals we work with</h2>
+    <div class="hosp">
+      <span class="tag">The First Affiliated Hospital of Xi'an Jiaotong University</span>
+      <span class="tag">The Second Affiliated Hospital of Xi'an Jiaotong University</span>
+      <span class="tag">Shaanxi Provincial People's Hospital</span>
+      <span class="tag">Xi'an Central Hospital</span>
+      <span class="tag">Xi'an Daxing Hospital</span>
+      <span class="tag">Xi'an Honghui Hospital</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">How It Works</div>
+    <h2 class="serif" style="font-size:32px">Four steps to treatment</h2>
+    <div class="steps">
+      <div class="step"><b>1 · Send us your records</b><p>Message us your diagnosis and recent reports — free, confidential review.</p></div>
+      <div class="step"><b>2 · Get matched</b><p>Receive a hospital and specialist recommendation with a written cost estimate.</p></div>
+      <div class="step"><b>3 · Fly &amp; treat</b><p>We handle arrival, interpretation and coordination through your full treatment.</p></div>
+      <div class="step"><b>4 · Follow up at home</b><p>Reports go back to your doctors; remote consultations keep care continuous.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker" style="color:#E8D9B8">Contact</div>
+    <h2>Start with a free, confidential consultation</h2>
+    <p>Send us your diagnosis or question in any language. A coordinator replies within 24 hours — no obligation, no fees until you approve a plan.</p>
+    <div class="cards">
+      <div class="card">
+        <small>Email</small>
+        <a href="mailto:sjp.xjtu@gmail.com">sjp.xjtu@gmail.com</a><br>
+        <a href="mailto:308724135@qq.com">308724135@qq.com</a>
+      </div>
+      <div class="card">
+        <small>WhatsApp</small>
+        <a href="https://wa.me/12678546998" target="_blank" rel="noopener">+1 267 854 6998</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Chang'an Care · Xi'an, China</span>
+    <span>Chang'an Care is a medical travel facilitation service, not a medical provider. Diagnosis and treatment are performed by licensed hospitals and physicians.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
